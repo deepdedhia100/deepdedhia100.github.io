@@ -1,0 +1,129 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        OBS
+    </title>
+     
+</head>
+<body >
+
+    <img src="C:\Users\deep\Desktop\login.jpg">
+
+    <link rel="stylesheet" href="signup.css">
+
+     <br><div class="login-box">
+  <h2>Sign up</h2>
+
+<form name="myForm" method="GET" action="signupcheck.jsp" autocomplete="on" >
+    
+ 
+    <div>
+        <div class="user-box">
+        <label for="fname">First Name</label><br>
+    <input type="text" name="fname" id="fname"  size="20" maxlength="20" placeholder="Enter you first name" required autocomplete="on" ><br>
+    </div>
+
+    <div>
+        <div class="user-box">
+       <label for="lname">Last Name</label> <br>
+    <input type="text" name="lname" id="lname"  placeholder="Enter your Last Name" required autocomplete="on">
+    </div>
+
+    <div>
+        
+
+        <label for="gender" style="color: white;font-family: calibri;font-size: 30px;"><b>Gender</b></label><br>
+       <label for="gender" style="color: white;"> Male</label><input type="radio" name="gender" id="male" value="Male" ><br>
+        
+        <label for="gender" style="color: white;">Female</label><input type="radio" name="gender" id="female" value="Female"><br>
+
+       <label for="gender" style="color: white;"> Other</label><input type="radio" name="gender" id="Other" value="Other"><br>
+    </div><br>
+
+    <div>
+
+         <div class="user-box">
+         <label for="email">Email ID </label><br>
+        <input type="email" name="email" id="email" placeholder="mailinitials@gmail.com" multiple autocomplete="off" required>
+    </div>
+
+
+    
+   
+
+    <div>
+        <div class="user-box">
+        <label for="age">Age</label><br>
+        <input type="number" name="age" id="age" placeholder="Min age: 18" min="18" required>
+    </div>
+
+    <div>
+        <div class="user-box">
+       <label for="accno">Account number</label> <br>
+       <input type="text" size="35" name="accno" id="accno" placeholder="Enter your 10 digit account number" autocomplete="on" required >
+    </div>
+
+    <div>
+        <div class="user-box">
+        <label for="pin">PIN</label>
+        <br><input type="password" name="pin" id="pin" placeholder="Enter your 4-digit pin" maxlength="4" required >
+    </div>
+
+    <div>
+         <div class="user-box">
+     <label for="verify">Enter proof for verification</label><br>
+  <input type="file" id="verify" name="verify" placeholder="Aadhar Card/Pan Card">
+</div>
+<div>
+     <div class="user-box">
+       <label for="balance"> Your current balance</label><br>
+       <input type="text"  name="balance" id="balance" placeholder="Fill the exact amount" required >
+    </div>
+    
+
+    
+
+    <div>
+        <input type="checkbox" id="TC" name="TC" value="not a robot" onclick="alert('Check all the details once before submitting.');"> <label for="TC" style="font-family: roman; color: white;"> I am not a robot.</label><br>
+
+     <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <input type="reset" value="Reset">
+    <input type="submit" value="Submit" onclick="myFunction()">
+ </a>
+</div>
+
+<p><a href="#"  onclick="alert('Dear Customer,click on log in to open your account.');" ><b>Already an existing Customer?Log In.<b></a></p>
+
+<div>
+ <a href="https://pixabay.com/illustrations/background-rainbow-sound-wave-313415/">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    <button type="submit" value="signup" name="action">Log In</button>
+</a>
+</div>
+</form>
+</div>
+
+</body>
+<script>
+    function myFunction(){
+        var a= document.getElementById("balance").value;
+        localStorage.setItem("balance",a);
+        return a;
+        
+    }
+    
+    
+    </script>
+</html>
