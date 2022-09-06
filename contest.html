@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script type = "text/javascript">
+
+    function highlightInput(elm){
+            elm.style.background = "yellow";
+        }    
+      </script>
+      <script type = "text/javascript">
+
+
+
+      function validate() {
+      
+         if( document.f1.fname.value == "" ) {
+            alert( "Please provide your name!" );
+            document.f1.fname.focus() ;
+            return false;
+         }
+         if( document.f1.lname.value == "" ) {
+            alert( "Please provide your last name!" );
+            document.f1.lname.focus() ;
+            return false;
+         }
+         if( document.f1.mail.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.f1.mail.focus() ;
+            return false;
+         }
+  </script>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" type="text/css" href="contest.css">
+<body>
+
+<p style="text-align: center; font-family: calibri; font-size: 60px;background: black;  color: white;" class="animate__animated animate__heartBeat animate"><b>FITNESS FREAK</b><br><b style="font-size: 20px" class="animate__animated animate__heartBeat animate"> #FF >> to a Fit Life!</b></p>
+
+
+
+<form name="f1" target="_self" method="post" style="text-align: center;  background-color:#6969;font-family: calibri;" onsubmit="return validate()"><b>
+
+ <label for="fname" autocomplete="on" novalidate  >First name:</label><br>
+  <input type="text" id="fname" name="fname" onfocus="highlightInput(this)" required><br>
+
+  <label for="lname" autocomplete="on" novalidate>Last name:</label><br>
+  <input type="text" id="lname" name="lname" onfocus="highlightInput(this)" required><br><br>
+
+  <label for="phone"> Phone number:</label><br>
+ <input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-9]{10}" required onfocus="highlightInput(this)"  ><br><br>
+
+      <label for="mail"  autocomplete="on">Email</label><br>
+ <input type="email" id="mail" name="mail" placeholder="mailinitials@gmail.com" onfocus="highlightInput(this)" ><br><br>
+  
+   <label for="pass">Password</label><br>
+ <input type="password" id="pass" name="pass" maxlength="10" required onfocus="highlightInput(this)"  ><br><br>
+   
+    <label for="gender">Gender</label><br>
+     <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br><br>
+
+  <p><a href="https://www.w3schools.com/"  onmouseover="alert('Rules will be downloaded on your desktop.');" ><b>Click Here For Format And Rules Of The Contest!<b></a></p>
+
+   <label for="myfile">Select a file:</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+
+<label for="message">Your Story:</label><br>
+<textarea name="message" rows="10" cols="30" autocomplete="on" required></textarea><br>
+  <br>
+  <br><input type="checkbox" id="TC" name="TC" value="agreed to T&C" onmouseover="alert('Make sure you have noted the terms and conditions!');"> <label for="TC"> I have read the terms and condition of the contest</label><br>
+
+ <input type="submit" value="Submit">
+
+
+
+
+
+</b></form> 
+
+<footer  style="background: white">
+	<p style="text-align: center; font-family: calibri; font-size: 20px;background: black;  color: white;">Lucky Winners of this contest will win: <br> 1] Exclusive Merchandise from FF <br> 2] Their videos and stories will be featured on our website<br></p>
+  <p><b>Founder: Deepak Dedhia</b><br>
+  <a href="mailto:deepdedhia100@gmail.com">ffsupport@gmail.com</a><br>
+Contact:9969696969699</p><br>
+</footer>
+
+
+
+</body>
+</head>
+</html>

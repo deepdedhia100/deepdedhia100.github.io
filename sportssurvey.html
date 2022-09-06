@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head><style>  
+         table, th , td {  
+            border: 1px solid grey;  
+            border-collapse: collapse;  
+            padding: 5px;  
+         }  
+           
+         table tr:nth-child(odd) {  
+            background-color: #f2f2f2;  
+         }  
+           
+         table tr:nth-child(even) {  
+            background-color: #ffffff;  
+         }  
+
+         input.ng-invalid {
+    background-color:pink;
+}
+input.ng-valid {
+    background-color:lightgreen;
+}
+      </style>  
+    </head>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" >
+<body style="background: #6969" onload="alert('The page loaded successfully')" >
+
+  <script>  
+         var mainApp = angular.module("mainApp", []);  
+           
+         mainApp.controller('studentController', function($scope) {  
+            $scope.student = {  
+               firstName: "deep",  
+               lastName: "dedhia",  
+                
+                 
+               subjects:[  
+                  {name:'deep',marks:1234567890},  
+                  {name:'joy',marks:5468792130},  
+                  {name:'raj',marks:8794561230},  
+                 
+               ],  
+                 
+               fullName: function() {  
+                  var studentObject;  
+                  studentObject = $scope.student;  
+                  return studentObject.firstName + " " + studentObject.lastName;  
+               }  
+            };  
+         });  
+      </script>  
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+  <script>
+        function highlightInput(elm){
+            elm.style.background = "yellow";
+        }    
+
+       function name() {
+    var x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+  }
+
+      function reset() {
+  alert("The form was reset");
+}
+
+function color()
+{   
+document.body.style.backgroundColor= "lightpink";
+}
+
+
+
+
+    </script>
+
+<h2 style="text-align: center; font-family: calibri; font-size: 30px;" class="animate__animated animate__heartBeat animate">SURVEY FORM</h2>
+
+<form name="myForm" target="_self" method="post" style="text-align: center" onsubmit="alert('Form data will be submitted to the server!');" onreset="reset()">
+
+
+  <fieldset >
+    <legend>Personal info</legend>
+  <label for="fname" autocomplete="on" novalidate onblur="name()" value="" ng-model="fname" >First name:</label><br>
+  <input type="text" id="fname" name="fname" onfocus="highlightInput(this)" ><br>
+  
+
+  <label for="lname" autocomplete="on" novalidate>Last name:</label><br>
+  <input type="text" id="lname" name="lname" onfocus="highlightInput(this)"><br><br>
+  
+  
+</fieldset>
+
+
+<fieldset>
+  <legend>Login Credentials:</legend>
+  <label for="phone"> Phone number:</label><br>
+  <input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-9]{10}" required onfocus="highlightInput(this)"><br><br>
+      <label for="mail"  autocomplete="on">Email</label><br>
+    <input type="email" id="mail" name="mail" placeholder="mailinitials@gmail.com" required onfocus="highlightInput(this)"><br><br>
+   <label for="pass">Password</label><br>
+   <input type="password" id="pass" name="pass" maxlength="10" onfocus="highlightInput(this)" ><br>
+</fieldset><br>
+
+
+ <label for="gender">Gender</label><br>
+     <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br><br>
+
+
+  <b><label for="s">Which is/are your favourite sport/s?</label></b><br><br>
+<select id="s" name="s" size="5" multiple onchange="alert('You have changed the selection!');">
+  <option value="football">FOOTBALL</option>
+  <option value="basketball">Basketball</option>
+  <option value="Badminton">Badminton</option>
+  <option value="Cricket">Cricket</option>
+  <option value="Swimming">Swimming</option>
+  <option value="Rugby">Rugby</option>
+  <option value="Tennis">Tennis</option>
+  <option value="Table tennis">Table tennis</option>
+  <option value="other">other</option>
+  </select><br><br>
+  
+<b><label for="brand">Which brands do you usually prefer?</label></b><br><br>
+<select id="brand" name="brand" size="2" multiple onchange="alert('You have changed the selection!');">
+  <option value="NIKE">NIKE</option>
+  <option value="PUMA">PUMA</option>
+  <option value="ADIDAS">ADIDAS</option>
+  <option value="NEW BALANCE">NEW BALANCE</option>
+</select><br><br>
+<b><label for="info">Where have you heard about us?</label></b><br><br>
+<input type="checkbox" id="info" name="info" >
+  <label for="info"> from a friend.</label><br>
+  <input type="checkbox" id="info" name="info" >
+  <label for="info"> Instagram</label><br>
+  <input type="checkbox" id="info" name="info">
+  <label for="info"> facebook ads </label><br>
+   <input type="checkbox" id="info" name="info">
+  <label for="info">posters </label><br>
+   <input type="checkbox" id="info" name="info">
+  <label for="info"> Browser pop ups </label><br>
+   <input type="checkbox" id="info" name="info">
+  <label for="info"> GYMS & sporting arenas</label><br>
+   <input type="checkbox" id="info" name="info">
+  <label for="info">other </label><br><br>
+   <input list="browsers">
+    <b><label for="browsers">How often do you workout to stay fit?</label></b><br>
+  <datalist id="browsers"><br>
+    <option value="20-25 times a month">
+    <option value="15-20 times a month">
+      <option value="10-15 times a month">
+        <option value="5-10 times a month">
+          <option value="less than that">
+    
+  </datalist><br>
+
+   <b><label for="shop">How Do you prefer shopping products?</label></b><br>
+     <input type="radio" id="shop" name="shop" >
+  <label for="shop">Go to the store and shop.</label><br>
+  <input type="radio" id="shop" name="shop" >
+  <label for="shop">Shop products online.</label><br><br>
+
+  <fieldset>
+    <legend>Your Inspiration</legend>
+      
+
+<input name="athletes" ng-model="athletes" ng-list/>
+
+<pre>{{athletes}}</pre>
+
+  </fieldset>
+
+<fieldset>
+  <legend>Our details:</legend>
+  <div ng-app = "mainApp" ng-controller = "studentController">  
+         <table border = "0" align="center">  
+            <tr>  
+               <td>Enter first name:</td>  
+               <td><input type = "text" ng-model = "student.firstName"></td>  
+            </tr>  
+            <tr>  
+               <td>Enter your location </td>  
+               <td>  
+                  <input type = "text" ng-model = "student.lastName">  
+               </td>  
+            </tr>  
+           
+            <tr>  
+               <td>Contact Us:</td>  
+              <td>  
+                  <table>  
+                     <tr>  
+                        <th>Name</th>.  
+                        <th>contact</th>  
+                     </tr>  
+                     <tr ng-repeat = "subject in student.subjects">  
+                        <td>deep</td>  
+                        <td>1234567890</td>  
+                     </tr>  
+                     <tr ng-repeat = "subject in student.subjects">  
+                        <td>joy</td>  
+                        <td>1234567890</td>  
+                     </tr>  
+                     <tr ng-repeat = "subject in student.subjects">  
+                        <td>raj</td>  
+                        <td>1234567890</td>  
+                     </tr>  
+                  </table>  
+               </td>  
+                      
+            </tr>  
+         </table>  
+           
+      </div>  
+        
+</fieldset>
+
+
+  <fieldset >
+    <legend>BMI</legend>
+  <label for="bmi" autocomplete="on" novalidate>Height in cms:</label><br>
+  <input type="text" id="bmi" name="bmi" ><br>
+  <label for="bmi" autocomplete="on" novalidate>Weight:</label><br>
+  <input type="text" id="bmi" name="bmi"><br><br>
+  <b><label for="bmi "><a href="#" onmouseover="alert('This link will automatically display your bmi.');">You can check your bmi rating here.</a></label></b><br>
+  
+</fieldset>
+ <br><input type="checkbox" id="TC" name="TC" value="not a robot" onclick="alert('Check all the details once before submitting.');"> <label for="TC"> I am not a robot.</label><br>
+
+
+
+  <input type="submit" value="Submit" >
+  <input type="reset">
+  <button type="button" ondblclick="color()">Set background color</button>
+
+</form> 
+
+
+
+</body>
+</html>
